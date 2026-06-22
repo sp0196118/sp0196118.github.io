@@ -31,7 +31,7 @@ const CONFIG = {
   githubBranch:"main",       /* branch to push to                          */
 
   /* ── Admin password (plain text — keep this file private) ── */
-  adminPassword: "sachin2026",
+  adminPassword: "sachin27648",
 
   /* ── Bio ────────────────────────────────────────────── */
   bio: [
