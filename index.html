@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sachin Patel — Data Scientist. IIT Bombay M.Sc. Specialist in Python automation, SQL pipelines, ML, and operations research.">
+  <meta name="keywords"    content="Sachin Patel, Operations Research, Data Scientist, IIT Bombay, Pyomo, Gurobi, MILP, Machine Learning, SQL, Python">
+  <meta name="author"      content="Sachin Patel">
+  <meta property="og:title"       content="Sachin Patel — Data Scientist">
+  <meta property="og:description" content="IIT Bombay M.Sc. | Python Automation · SQL · ML · Operations Research">
+  <meta property="og:type"        content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Sachin Patel — Data Scientist</title>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════════════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo" id="nav-logo"></div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-controls">
+      <!-- Dark/Light toggle -->
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon-dark">🌙</span>
+        <span class="theme-icon-light">☀️</span>
+      </button>
+
+      <!-- Resume download -->
+      <a class="nav-resume" id="nav-resume" href="#" download title="Download Resume">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Resume
+      </a>
+
+      <!-- Edit mode toggle -->
+      <button class="edit-toggle" id="edit-toggle" aria-label="Edit website content" title="Edit content live">
+        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        Edit
+      </button>
+
+      <a class="nav-cta" id="nav-hire" href="#">Hire Me</a>
+
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════════
+     EDIT PANEL (slides in from right)
+══════════════════════════════════════════════════════════ -->
+<div class="edit-overlay" id="edit-overlay"></div>
+<div class="edit-panel" id="edit-panel" aria-hidden="true">
+  <div class="ep-header">
+    <span class="ep-title">✏️ Edit Your Portfolio</span>
+    <button class="ep-close" id="ep-close" aria-label="Close editor">✕</button>
+  </div>
+  <div class="ep-note">
+    Changes save instantly to your browser. To make them permanent, copy the updated <code>config.js</code> shown below.
+  </div>
+
+  <div class="ep-tabs">
+    <button class="ep-tab active" data-tab="info">Info</button>
+    <button class="ep-tab" data-tab="hero">Hero</button>
+    <button class="ep-tab" data-tab="experience">Experience</button>
+    <button class="ep-tab" data-tab="projects">Projects</button>
+    <button class="ep-tab" data-tab="export">Export</button>
+  </div>
+
+  <!-- TAB: INFO -->
+  <div class="ep-body" id="tab-info">
+    <div class="ef-group">
+      <label class="ef-label">Full Name</label>
+      <input class="ef-input" data-key="name" type="text">
+    </div>
+    <div class="ef-group">
+      <label class="ef-label">Job Title / Role</label>
+      <input class="ef-input" data-key="role" type="text">
+    </div>
+    <div class="ef-group">
+      <label class="ef-label">Status Tagline</label>
+      <input class="ef-input" data-key="tagline" type="text">
+    </div>
+    <div class="ef-group">
+      <label class="ef-label">Location</label>
+      <input class="ef-input" data-key="location" type="text">
+    </div>
+    <div class="ef-group">
+      <label class="ef-label">Email</label>
+      <input class="ef-input" data-key="email" type="email">
+    </div>
+    <div class="ef-group">
+      <label class="ef-label">Phone</label>
+      <input class="ef-input" data-key="phone" type="text">
+    </div>
+    <div class="ef-group">
+      <label class="ef-label">LinkedIn URL</label>
+      <input class="ef-input" data-key="linkedin" type="url">
+    </div>
+    <div class="ef-group">
+      <label class="ef-label">GitHub URL</label>
+      <input class="ef-input" data-key="github" type="url">
+    </div>
+    <div class="ef-group">
+      <label class="ef-label">Resume File URL / Path</label>
+      <input class="ef-input" data-key="resumeFile" type="text" placeholder="e.g. resume.pdf">
+      <small class="ef-hint">Place your PDF in the same folder, then enter its filename here.</small>
+    </div>
+    <div class="ef-group">
+      <label class="ef-label">Profile Photo URL / Path</label>
+      <input class="ef-input" data-key="photoUrl" type="text" placeholder="e.g. photo.jpg or https://...">
+      <small class="ef-hint">Leave blank to show initials avatar.</small>
+    </div>
+    <div class="ef-group">
+      <label class="ef-label">Bio (one paragraph per line)</label>
+      <textarea class="ef-textarea" data-key="bio" rows="6"></textarea>
+      <small class="ef-hint">You can use &lt;strong&gt;bold&lt;/strong&gt; tags.</small>
+    </div>
+  </div>
+
+  <!-- TAB: HERO STATS -->
+  <div class="ep-body hidden" id="tab-hero">
+    <p class="ef-section-title">Hero Stats (up to 3)</p>
+    <div id="ep-stats-list"></div>
+    <div class="ef-group">
+      <label class="ef-label">Accent Color (CSS hex)</label>
+      <div style="display:flex;gap:8px;align-items:center;">
+        <input class="ef-input" data-key="accentColor" type="text" style="flex:1" placeholder="#00D4AA">
+        <input type="color" id="color-picker" style="width:36px;height:36px;border:none;border-radius:4px;cursor:pointer;background:none;">
+      </div>
+      <small class="ef-hint">Changes the green/teal highlight colour everywhere.</small>
+    </div>
+  </div>
+
+  <!-- TAB: EXPERIENCE -->
+  <div class="ep-body hidden" id="tab-experience">
+    <p class="ef-section-title">Work Experience</p>
+    <div id="ep-exp-list"></div>
+    <button class="ef-add-btn" id="ep-add-exp">+ Add Role</button>
+  </div>
+
+  <!-- TAB: PROJECTS -->
+  <div class="ep-body hidden" id="tab-projects">
+    <p class="ef-section-title">Projects</p>
+    <div id="ep-proj-list"></div>
+    <button class="ef-add-btn" id="ep-add-proj">+ Add Project</button>
+  </div>
+
+  <!-- TAB: EXPORT -->
+  <div class="ep-body hidden" id="tab-export">
+    <p class="ef-section-title">Export updated config.js</p>
+    <p class="ef-hint-block">Copy everything below, paste it into your <code>config.js</code> file, and save. Your changes will be permanent.</p>
+    <button class="ef-copy-btn" id="ep-copy-config">📋 Copy config.js to clipboard</button>
+    <textarea class="ef-code" id="ep-config-output" readonly rows="30"></textarea>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="hero-tag" id="hero-tag"></p>
+      <h1 class="hero-name" id="hero-name"></h1>
+      <p class="hero-role" id="hero-role"></p>
+      <div class="hero-bio" id="hero-bio"></div>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact"  class="btn-ghost">Get in Touch</a>
+        <a class="btn-download" id="hero-resume-btn" href="#" download>
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Resume
+        </a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <!-- Photo / avatar -->
+      <div class="photo-wrap" id="photo-wrap">
+        <div class="photo-ring"></div>
+        <div class="photo-inner" id="photo-inner">
+          <!-- filled by JS: either <img> or initials -->
+        </div>
+      </div>
+      <div class="hero-stats" id="hero-stats"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     CONTACT BAR
+══════════════════════════════════════════════════════════ -->
+<div class="contact-bar">
+  <div class="contact-bar-inner" id="contact-bar"></div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     ABOUT
+══════════════════════════════════════════════════════════ -->
+<div id="about" class="full-section alt-bg">
+  <div class="section-inner">
+    <div class="sec-head">
+      <p class="sec-label">Background</p>
+      <h2 class="sec-title">About Me</h2>
+    </div>
+    <div class="about-grid">
+      <div>
+        <div id="about-bio"></div>
+        <div class="about-facts" id="about-facts"></div>
+        <div class="hobbies-row" id="about-hobbies"></div>
+      </div>
+      <div>
+        <div class="edu-block" id="about-edu"></div>
+        <div class="certs-row" id="about-certs"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     SKILLS
+══════════════════════════════════════════════════════════ -->
+<section id="skills" class="section">
+  <div class="sec-head">
+    <p class="sec-label">Technical Stack</p>
+    <h2 class="sec-title">Skills &amp; Tools</h2>
+  </div>
+  <div class="skills-grid" id="skills-grid"></div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     EXPERIENCE
+══════════════════════════════════════════════════════════ -->
+<div id="experience" class="full-section alt-bg">
+  <div class="section-inner">
+    <div class="sec-head">
+      <p class="sec-label">Career</p>
+      <h2 class="sec-title">Work Experience</h2>
+    </div>
+    <div id="experience-list"></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PROJECTS
+══════════════════════════════════════════════════════════ -->
+<section id="projects" class="section">
+  <div class="sec-head">
+    <p class="sec-label">Research &amp; Engineering</p>
+    <h2 class="sec-title">Projects</h2>
+  </div>
+  <div class="projects-grid" id="projects-grid"></div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     ACHIEVEMENTS
+══════════════════════════════════════════════════════════ -->
+<div id="achievements" class="full-section alt-bg">
+  <div class="section-inner">
+    <div class="sec-head">
+      <p class="sec-label">Recognition</p>
+      <h2 class="sec-title">Achievements &amp; Activities</h2>
+    </div>
+    <div class="ach-grid" id="ach-grid"></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     CONTACT
+══════════════════════════════════════════════════════════ -->
+<section id="contact" class="section">
+  <div class="sec-head">
+    <p class="sec-label">Let's Connect</p>
+    <h2 class="sec-title">Get in Touch</h2>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <p>I'm actively looking for roles in Data Science, Analytics Automation, and Operations Research. If you have an opportunity or want to discuss ideas, feel free to reach out.</p>
+      <div class="contact-links-list" id="contact-links"></div>
+    </div>
+    <div class="contact-form-wrap">
+      <div class="form-title">Send a Message</div>
+      <form id="contact-form">
+        <div class="f-group">
+          <label class="f-label">Name</label>
+          <input class="f-input" type="text" placeholder="Your full name" required>
+        </div>
+        <div class="f-group">
+          <label class="f-label">Email</label>
+          <input class="f-input" type="email" placeholder="you@company.com" required>
+        </div>
+        <div class="f-group">
+          <label class="f-label">Message</label>
+          <textarea class="f-textarea" placeholder="Tell me about the opportunity…" required></textarea>
+        </div>
+        <button type="submit" class="f-submit">Send Message</button>
+      </form>
+      <div class="form-success" id="form-success">
+        ✅ Message sent! Sachin will get back to you soon.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════════ -->
+<footer>
+  <p id="footer-text"></p>
+</footer>
+
+<script src="config.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
