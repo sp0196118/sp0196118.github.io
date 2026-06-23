@@ -8,7 +8,7 @@
   "linkedin": "https://linkedin.com/in/SachinPatel",
   "github": "https://github.com/SachinPatel",
   "resumeFile": "Sachin_Patel_Resume.pdf",
-  "photoUrl": "",
+  "photoUrl": "sachin_photo",
   "accentColor": "#00D4AA",
   "githubOwner": "",
   "githubRepo": "",
@@ -16,7 +16,6 @@
   "bio": [
     "M.Sc. Operations Research from <strong>IIT Bombay</strong> · 1.5+ years turning messy datasets into automated, insight-driven systems.",
     "I build <strong>Python ETL pipelines</strong>, <strong>advanced SQL reporting</strong>, and <strong>ML models</strong> that replace Excel chaos with scalable automation — directly aligned with Corporate Finance & Analytics roles.",
-    "Outside work: chess, technical blogging, and trying to beat my 5K PB. 🏃"
   ],
   "heroStats": [
     { "value": "1.5+",   "label": "Years Experience" },
@@ -34,7 +33,7 @@
     { "issuer": "IBM",         "title": "Python for Data Science" },
     { "issuer": "Internshala", "title": "Machine Learning Training" }
   ],
-  "hobbies": ["♟ Chess", "✍ Technical Blogging", "🏃 Running"],
+  "hobbies": ["🏸 Badminton", "🏏 Cricket", "🏋️ Gym"],
   "skills": [
     { "category": "SQL & Databases",           "highlights": ["Advanced SQL","MongoDB"],       "others": ["CTEs","Window Functions","Aggregations","MySQL","PostgreSQL"] },
     { "category": "Python & Automation",       "highlights": ["Python","Pandas"],              "others": ["NumPy","Scikit-learn","ETL Pipelines","Jupyter Notebooks","Modular Code"] },
