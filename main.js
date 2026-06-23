@@ -9,6 +9,8 @@
  * ══════════════════════════════════════════════════════════
  */
 
+const CONFIG = await fetch('/config.json').then(r => r.json());
+
 /* ── mutable config reference ───────────────────────────── */
 let C = CONFIG;
 
