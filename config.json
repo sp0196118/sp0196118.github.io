@@ -1,119 +1,48 @@
 {
-  "personal": {
-    "name": "Sachin Patel",
-    "role": "Data Scientist",
-    "tagline": "Open to work · India",
-    "location": "Gurugram, India",
-    "email": "sp0196118@gmail.com",
-    "phone": "+91-6232610569",
-    "linkedin": "https://www.linkedin.com/in/sachin-patel-7514a0346/",
-    "github": "https://github.com/sp0196118/",
-    "resumeFile": "Sachin_Patel_Resume.pdf",
-    "photoUrl": "sachin_photo.jpg",
-    "accentColor": "#00D4AA"
-  },
-
+  "name": "Sachin Patel",
+  "role": "Data Scientist",
+  "tagline": "Open to Internships · Mumbai / Gurugram",
+  "location": "New Delhi, India",
+  "email": "sp0196118@gmail.com",
+  "phone": "+91-6232610569",
+  "linkedin": "https://linkedin.com/in/SachinPatel",
+  "github": "https://github.com/SachinPatel",
+  "resumeFile": "Sachin_Patel_Resume.pdf",
+  "photoUrl": "",
+  "accentColor": "#00D4AA",
+  "githubOwner": "",
+  "githubRepo": "",
+  "githubBranch": "main",
   "bio": [
-    "M.Sc. Operations Research from IIT Bombay · 1.5+ years turning messy datasets into automated, insight-driven systems.",
-    "I build Python ETL pipelines, advanced SQL reporting, and ML models that replace Excel chaos with scalable automation."
+    "M.Sc. Operations Research from <strong>IIT Bombay</strong> · 1.5+ years turning messy datasets into automated, insight-driven systems.",
+    "I build <strong>Python ETL pipelines</strong>, <strong>advanced SQL reporting</strong>, and <strong>ML models</strong> that replace Excel chaos with scalable automation — directly aligned with Corporate Finance & Analytics roles.",
+    "Outside work: chess, technical blogging, and trying to beat my 5K PB. 🏃"
   ],
-
   "heroStats": [
-    {
-      "value": "1.5+",
-      "label": "Years Experience"
-    },
-    {
-      "value": "40%",
-      "label": "Reporting Time Saved"
-    },
-    {
-      "value": "AIR 60",
-      "label": "IIT JAM 2022"
-    }
+    { "value": "1.5+",   "label": "Years Experience" },
+    { "value": "40%",    "label": "Reporting Time Saved" },
+    { "value": "AIR 60", "label": "IIT JAM 2022" }
   ],
-
   "education": [
-    {
-      "degree": "M.Sc. Operations Research",
-      "institution": "Indian Institute of Technology Bombay",
-      "grade": "8.6 / 10",
-      "year": "2022–2024"
-    },
-    {
-      "degree": "B.Sc. Operational Research",
-      "institution": "Deen Dayal Upadhyaya College, University of Delhi",
-      "grade": "8.8 / 10",
-      "year": "2019–2022"
-    },
-    {
-      "degree": "12th — CBSE",
-      "institution": "CBSE Board",
-      "grade": "91%",
-      "year": "2019"
-    },
-    {
-      "degree": "10th — CBSE",
-      "institution": "CBSE Board",
-      "grade": "84%",
-      "year": "2017"
-    }
+    { "degree": "M.Sc. — Operations Research",  "institution": "Indian Institute of Technology, Bombay",            "grade": "8.6 / 10", "year": "2022–2024" },
+    { "degree": "B.Sc. — Operational Research", "institution": "Deen Dayal Upadhyaya College, University of Delhi", "grade": "8.8 / 10", "year": "2019–2022" },
+    { "degree": "12th — CBSE",                  "institution": "CBSE Board",                                        "grade": "91%",       "year": "2019" },
+    { "degree": "10th — CBSE",                  "institution": "CBSE Board",                                        "grade": "84%",       "year": "2017" }
   ],
-
   "certifications": [
-    {
-      "issuer": "NPTEL",
-      "title": "Data Science for Engineers · Elite Silver"
-    },
-    {
-      "issuer": "IBM",
-      "title": "Python for Data Science"
-    },
-    {
-      "issuer": "Internshala",
-      "title": "Machine Learning Training"
-    }
+    { "issuer": "NPTEL",       "title": "Data Science for Engineers · Elite Silver" },
+    { "issuer": "IBM",         "title": "Python for Data Science" },
+    { "issuer": "Internshala", "title": "Machine Learning Training" }
   ],
-
-  "hobbies": [
-    "🏸 Playing Badminton",
-    "🏏 Playing Cricket",
-    "🏋️ Fitness & Gym"
-  ],
-
+  "hobbies": ["♟ Chess", "✍ Technical Blogging", "🏃 Running"],
   "skills": [
-    {
-      "category": "SQL & Databases",
-      "highlights": ["Advanced SQL", "MongoDB"],
-      "others": ["CTEs", "Window Functions", "Aggregations", "MySQL", "PostgreSQL"]
-    },
-    {
-      "category": "Python & Automation",
-      "highlights": ["Python", "Pandas"],
-      "others": ["NumPy", "Scikit-learn", "ETL Pipelines", "Jupyter Notebooks"]
-    },
-    {
-      "category": "Machine Learning",
-      "highlights": ["XGBoost", "Scikit-learn"],
-      "others": ["Regression", "Classification", "Clustering", "PCA", "Random Forest", "SVM"]
-    },
-    {
-      "category": "Time Series & Forecasting",
-      "highlights": ["Demand Forecasting"],
-      "others": ["MAPE", "SMAPE", "Seasonality", "Inventory Optimization"]
-    },
-    {
-      "category": "Optimisation",
-      "highlights": ["Pyomo", "Gurobi"],
-      "others": ["CBC", "GLPK", "MILP", "VRP", "Linear Programming"]
-    },
-    {
-      "category": "Analytics & Cloud",
-      "highlights": [],
-      "others": ["Financial Report Automation", "Dashboard Analytics", "Git", "AWS (Basic)"]
-    }
+    { "category": "SQL & Databases",           "highlights": ["Advanced SQL","MongoDB"],       "others": ["CTEs","Window Functions","Aggregations","MySQL","PostgreSQL"] },
+    { "category": "Python & Automation",       "highlights": ["Python","Pandas"],              "others": ["NumPy","Scikit-learn","ETL Pipelines","Jupyter Notebooks","Modular Code"] },
+    { "category": "Machine Learning",          "highlights": ["XGBoost","Scikit-learn"],       "others": ["Regression","Classification","Clustering","PCA","Random Forest","SVM"] },
+    { "category": "Time Series & Forecasting", "highlights": ["Demand Forecasting"],           "others": ["MAPE / SMAPE","Trend Modelling","Seasonality","Inventory Optimization"] },
+    { "category": "Optimisation",              "highlights": ["Pyomo","Gurobi"],               "others": ["CBC","GLPK","MILP","VRP","Linear Programming"] },
+    { "category": "Analytics & Cloud",         "highlights": [],                               "others": ["Financial Report Automation","Dashboard Analytics","Matplotlib","Seaborn","Git","AWS (basic)"] }
   ],
-
   "experience": [
     {
       "period": "May 2023 – Jan 2025",
@@ -122,90 +51,35 @@
       "location": "India",
       "type": "Full-time",
       "bullets": [
-        "Built Python ETL pipelines for GPS and operational datasets.",
-        "Developed advanced SQL reporting using MongoDB and relational databases.",
-        "Automated finance reports reducing manual effort by 40%.",
-        "Delivered optimization models achieving up to 10% operational cost reduction."
+        "Built <strong>Python-based ETL pipelines</strong> & <strong>automated data pipelines</strong> for GPS/operational datasets — eliminated manual Excel-heavy workflows",
+        "Wrote <strong>advanced SQL queries</strong> (CTEs, window functions, aggregations) on <strong>MongoDB</strong> & relational DBs for financial & operational reporting",
+        "Automated recurring <strong>finance reports</strong> & <strong>stakeholder data delivery</strong> — cut manual effort ~40%",
+        "Delivered <strong>optimisation models</strong> in production → up to 10% reduction in operational costs"
       ]
     },
     {
-      "period": "2022",
+      "period": "~3 Months (2022)",
       "role": "Operations Research Intern",
       "company": "Caliper Business Solutions",
       "location": "India",
       "type": "Internship",
       "bullets": [
-        "Preprocessed large datasets using Python and SQL.",
-        "Developed routing models reducing vehicle usage by 10%."
+        "Preprocessed large datasets with <strong>Python & SQL</strong> to boost analytics accuracy",
+        "Modelled routing solutions → ~10% reduction in vehicle usage"
       ]
     }
   ],
-
   "projects": [
-    {
-      "title": "EV Charging Station Placement Optimizer",
-      "desc": "Hyperlocal EV infrastructure planning using DBSCAN clustering and Integer Linear Programming.",
-      "metric": "⚡ Optimal coverage under budget constraints",
-      "tags": ["Operations Research", "MILP", "DBSCAN", "Streamlit"],
-      "link": "https://ev-station-placement-emegxm295cskbs4lejeksp.streamlit.app/"
-    },
-    {
-      "title": "Automated Reporting Pipeline",
-      "desc": "End-to-end Python automation from Excel to SQL and Jupyter reporting.",
-      "metric": "⚡ ~40% less manual reporting",
-      "tags": ["Python", "SQL", "ETL"],
-      "link": ""
-    },
-    {
-      "title": "Demand Forecasting — Walmart / M5",
-      "desc": "Store-product level demand forecasting using XGBoost.",
-      "metric": "📈 15–25% accuracy gain",
-      "tags": ["Time Series", "XGBoost"],
-      "link": ""
-    },
-    {
-      "title": "Fraud Detection on Financial Data",
-      "desc": "Classification models for imbalanced financial transaction datasets.",
-      "metric": "🎯 >30% recall improvement",
-      "tags": ["Machine Learning", "Classification"],
-      "link": ""
-    },
-    {
-      "title": "Hospital Shift Scheduling",
-      "desc": "MILP-based hospital workforce scheduling using Pyomo and CBC.",
-      "metric": "10% cost reduction",
-      "tags": ["MILP", "Pyomo"],
-      "link": ""
-    },
-    {
-      "title": "Kernel Method for CCA",
-      "desc": "Research thesis extending CCA with kernel methods for nonlinear relationships.",
-      "metric": "🔬 Novel research",
-      "tags": ["Research", "Kernel Methods"],
-      "link": ""
-    }
+    { "title": "Automated Reporting Pipeline",       "desc": "End-to-end Python automation: Excel → parameterised SQL + Jupyter. Real-time trend & anomaly detection on financial datasets.", "metric": "⚡ ~40% less manual reporting", "tags": ["Python","SQL","ETL"],          "link": "" },
+    { "title": "Demand Forecasting — Walmart / M5", "desc": "Product-store level forecasts modelling trends, seasonality & holidays with XGBoost on the M5 retail dataset.",              "metric": "📈 15–25% accuracy gain",       "tags": ["Time Series","XGBoost"],      "link": "" },
+    { "title": "Fraud Detection on Financial Data", "desc": "Classifiers on imbalanced transaction data; model choice aligned to business risk via ROC-AUC & Precision-Recall.",          "metric": "🎯 >30% recall improvement",    "tags": ["ML","Imbalanced Data"],       "link": "" },
+    { "title": "Hospital Shift Scheduling",          "desc": "MILP model for 16-staff scheduling ensuring full coverage & labour-rule compliance using Pyomo + CBC.",                        "metric": "10% cost reduction",            "tags": ["MILP","Pyomo"],               "link": "" },
+    { "title": "Kernel Method for CCA",              "desc": "M.Sc. thesis: kernel-based CCA extension capturing nonlinear correlations as an optimisation problem. Outperformed traditional CCA.", "metric": "🔬 Novel research",        "tags": ["Kernel Methods","Research"],  "link": "" }
   ],
-
   "achievements": [
-    {
-      "icon": "🏆",
-      "title": "AIR 60 – IIT JAM Mathematics 2022",
-      "desc": "All India Rank 60."
-    },
-    {
-      "icon": "🥈",
-      "title": "NPTEL Elite Silver – Data Science",
-      "desc": "Elite Silver certification."
-    },
-    {
-      "icon": "🎓",
-      "title": "Jawahar Navodaya Vidyalaya",
-      "desc": "Cleared JNVST examination."
-    },
-    {
-      "icon": "📦",
-      "title": "Dept. Fest Logistics – IIT Bombay",
-      "desc": "Managed procurement and logistics."
-    }
+    { "icon": "🏆", "title": "AIR 60 – IIT JAM Mathematics 2022",  "desc": "All India Rank 60 → direct IIT Bombay admission." },
+    { "icon": "🥈", "title": "NPTEL Elite Silver – Data Science",   "desc": "Outstanding performance in NPTEL Data Science for Engineers." },
+    { "icon": "🎓", "title": "Jawahar Navodaya Vidyalaya",          "desc": "Cleared JNVST in 5th standard." },
+    { "icon": "📦", "title": "Dept. Fest Logistics – IIT Bombay",   "desc": "Managed procurement, printing & guest arrangements for IEOR fest." }
   ]
 }
