@@ -98,6 +98,12 @@ const CONFIG = {
 
   /* ── Projects ───────────────────────────────────────── */
   projects: [
+    {title: "EV Charging Station Placement Optimizer",
+      desc: "Built a hyperlocal EV infrastructure planning tool combining DBSCAN demand clustering and Integer Linear Programming (Set Cover Model) to identify cost-optimal charging station locations. Features interactive geospatial visualization with Streamlit, Folium, and Plotly.",
+      metric: "⚡ Optimal coverage under budget constraints",
+      tags: ["Operations Research", "MILP", "DBSCAN", "Streamlit"],
+      link: "https://ev-station-placement-emegxm295cskbs4lejeksp.streamlit.app/"
+}
     { title:"Automated Reporting Pipeline",             desc:"End-to-end Python automation: Excel → parameterised SQL + Jupyter. Real-time trend & anomaly detection on financial datasets.",              metric:"⚡ ~40% less manual reporting", tags:["Python","SQL","ETL"],         link:"" },
     { title:"Demand Forecasting — Walmart / M5",        desc:"Product-store level forecasts modelling trends, seasonality & holidays with XGBoost on the M5 retail dataset.",                              metric:"📈 15–25% accuracy gain",        tags:["Time Series","XGBoost"],     link:"" },
     { title:"Fraud Detection on Financial Data",        desc:"Classifiers on imbalanced transaction data; model choice aligned to business risk via ROC-AUC & Precision-Recall.",                         metric:"🎯 >30% recall improvement",     tags:["ML","Imbalanced Data"],      link:"" },
