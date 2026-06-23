@@ -37,7 +37,6 @@ const CONFIG = {
   bio: [
     "M.Sc. Operations Research from <strong>IIT Bombay</strong> · 1.5+ years turning messy datasets into automated, insight-driven systems.",
     "I build <strong>Python ETL pipelines</strong>, <strong>advanced SQL reporting</strong>, and <strong>ML models</strong> that replace Excel chaos with scalable automation — directly aligned with Corporate Finance & Analytics roles.",
-    "Outside work: chess, technical blogging, and trying to beat my 5K PB. 🏃"
   ],
 
   /* ── Hero stats ─────────────────────────────────────── */
@@ -62,7 +61,7 @@ const CONFIG = {
     { issuer: "Internshala", title: "Machine Learning Training" }
   ],
 
-  hobbies: ["♟ Chess", "✍ Technical Blogging", "🏃 Running"],
+  hobbies: ["🏸 Playing Badminton", "🏏 Playing Cricket", "🏋️ Fitness & Gym"],
 
   /* ── Skills ─────────────────────────────────────────── */
   skills: [
