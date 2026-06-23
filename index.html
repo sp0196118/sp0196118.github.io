@@ -14,10 +14,18 @@
 </head>
 <body>
 
-<!-- CANVAS for particle bg -->
 <canvas id="bg-canvas"></canvas>
 
-<!-- ═══════ NAV ═══════ -->
+<!-- ══ LOADING SCREEN ══ -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-logo">SP</div>
+    <div class="loader-bar"><div class="loader-fill" id="loader-fill"></div></div>
+    <div class="loader-txt">Loading portfolio…</div>
+  </div>
+</div>
+
+<!-- ══ NAV ══ -->
 <nav id="nav">
   <div class="nav-inner">
     <a class="nav-logo" id="nav-logo" href="#hero"></a>
@@ -30,274 +38,240 @@
     </ul>
     <div class="nav-right">
       <button class="btn-icon" id="theme-btn" title="Toggle theme" aria-label="Toggle theme">
-        <svg class="icon-dark" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-        <svg class="icon-light" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-dark" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        <svg class="icon-light" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
       </button>
       <a class="btn-resume" id="nav-resume" href="#" download>
         <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Resume
       </a>
-      <button class="btn-admin" id="admin-btn" title="Admin">
-        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      <button class="btn-admin" id="admin-btn" title="Admin Login">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
       </button>
       <button class="nav-burger" id="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
 
-<!-- ═══════ HERO ═══════ -->
+<!-- ══ HERO ══ -->
 <section id="hero">
   <div class="hero-inner">
     <div class="hero-left">
       <div class="hero-eyebrow" id="hero-eyebrow"></div>
       <h1 class="hero-name" id="hero-name"></h1>
       <div class="hero-role-wrap">
-        <span class="hero-role-prefix">&gt; </span>
+        <span class="mono-prefix">&gt;&nbsp;</span>
         <span class="hero-role" id="hero-role"></span>
-        <span class="hero-cursor">_</span>
+        <span class="cursor-blink">_</span>
       </div>
       <div class="hero-bio" id="hero-bio"></div>
       <div class="hero-cta">
         <a href="#projects" class="btn-primary">View Work</a>
         <a href="#contact"  class="btn-outline">Get in Touch</a>
         <a class="btn-dl" id="hero-dl" href="#" download>
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Download CV
         </a>
       </div>
     </div>
     <div class="hero-right">
-      <div class="avatar-ring" id="avatar-ring">
+      <div class="avatar-wrap" id="avatar-wrap">
         <div class="avatar-glow"></div>
+        <div class="avatar-orbit-ring">
+          <div class="orbit-dot"></div>
+        </div>
         <div class="avatar-img" id="avatar-img"></div>
-        <svg class="avatar-orbit" viewBox="0 0 200 200">
-          <circle cx="100" cy="100" r="90" fill="none" stroke="var(--accent)" stroke-width="0.6" stroke-dasharray="4 8" opacity="0.4"/>
-        </svg>
-        <div class="orbit-dot" id="orbit-dot"></div>
       </div>
       <div class="hero-stats" id="hero-stats"></div>
     </div>
   </div>
-  <div class="hero-scroll-hint">
-    <div class="scroll-line"></div>
-    <span>scroll</span>
-  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div><span>scroll</span></div>
 </section>
 
-<!-- ═══════ TICKER ═══════ -->
+<!-- ══ TICKER ══ -->
 <div class="ticker-wrap"><div class="ticker" id="ticker"></div></div>
 
-<!-- ═══════ ABOUT ═══════ -->
-<section id="about" class="section">
-  <div class="section-inner">
-    <div class="section-label">Background</div>
-    <h2 class="section-title">About Me</h2>
+<!-- ══ ABOUT ══ -->
+<section id="about" class="sec">
+  <div class="sec-inner">
+    <div class="sec-label">Background</div>
+    <h2 class="sec-title">About Me</h2>
     <div class="about-grid">
       <div class="about-bio" id="about-bio"></div>
-      <div class="about-right">
-        <div class="edu-cards" id="edu-cards"></div>
-        <div class="cert-row" id="cert-row"></div>
+      <div>
+        <div class="edu-list"  id="edu-list"></div>
+        <div class="cert-row"  id="cert-row"></div>
       </div>
     </div>
     <div class="fact-strip" id="fact-strip"></div>
   </div>
 </section>
 
-<!-- ═══════ SKILLS ═══════ -->
-<section id="skills" class="section alt">
-  <div class="section-inner">
-    <div class="section-label">Stack</div>
-    <h2 class="section-title">Skills & Tools</h2>
+<!-- ══ SKILLS ══ -->
+<section id="skills" class="sec alt">
+  <div class="sec-inner">
+    <div class="sec-label">Stack</div>
+    <h2 class="sec-title">Skills &amp; Tools</h2>
     <div class="skills-grid" id="skills-grid"></div>
   </div>
 </section>
 
-<!-- ═══════ EXPERIENCE ═══════ -->
-<section id="experience" class="section">
-  <div class="section-inner">
-    <div class="section-label">Career</div>
-    <h2 class="section-title">Work Experience</h2>
+<!-- ══ EXPERIENCE ══ -->
+<section id="experience" class="sec">
+  <div class="sec-inner">
+    <div class="sec-label">Career</div>
+    <h2 class="sec-title">Work Experience</h2>
     <div class="timeline" id="timeline"></div>
   </div>
 </section>
 
-<!-- ═══════ PROJECTS ═══════ -->
-<section id="projects" class="section alt">
-  <div class="section-inner">
-    <div class="section-label">Work</div>
-    <h2 class="section-title">Projects</h2>
+<!-- ══ PROJECTS ══ -->
+<section id="projects" class="sec alt">
+  <div class="sec-inner">
+    <div class="sec-label">Work</div>
+    <h2 class="sec-title">Projects</h2>
     <div class="projects-grid" id="projects-grid"></div>
   </div>
 </section>
 
-<!-- ═══════ ACHIEVEMENTS ═══════ -->
-<section id="achievements" class="section">
-  <div class="section-inner">
-    <div class="section-label">Recognition</div>
-    <h2 class="section-title">Achievements</h2>
+<!-- ══ ACHIEVEMENTS ══ -->
+<section id="achievements" class="sec">
+  <div class="sec-inner">
+    <div class="sec-label">Recognition</div>
+    <h2 class="sec-title">Achievements</h2>
     <div class="ach-grid" id="ach-grid"></div>
   </div>
 </section>
 
-<!-- ═══════ CONTACT ═══════ -->
-<section id="contact" class="section alt">
-  <div class="section-inner contact-inner">
-    <div class="section-label">Connect</div>
-    <h2 class="section-title">Get in Touch</h2>
+<!-- ══ CONTACT ══ -->
+<section id="contact" class="sec alt">
+  <div class="sec-inner">
+    <div class="sec-label">Connect</div>
+    <h2 class="sec-title">Get in Touch</h2>
     <div class="contact-grid">
-      <div class="contact-info">
-        <p class="contact-blurb">Open to Data & Automation internships in Mumbai or Gurugram. Let's talk.</p>
+      <div>
+        <p class="contact-blurb">Open to Data &amp; Automation internships in Mumbai or Gurugram. Let's talk.</p>
         <div class="contact-links" id="contact-links"></div>
       </div>
       <form class="contact-form" id="contact-form">
-        <div class="f-row"><input class="f-input" type="text" placeholder="Your name" required></div>
-        <div class="f-row"><input class="f-input" type="email" placeholder="your@email.com" required></div>
-        <div class="f-row"><textarea class="f-input f-ta" placeholder="Your message…" required></textarea></div>
+        <input class="f-input" type="text"  placeholder="Your name"      required>
+        <input class="f-input" type="email" placeholder="your@email.com" required>
+        <textarea class="f-input f-ta" placeholder="Your message…" required></textarea>
         <button type="submit" class="btn-primary w-full">Send Message</button>
-        <p class="form-ok hidden" id="form-ok">✓ Sent! I'll get back to you soon.</p>
+        <p class="form-ok hidden" id="form-ok">✓ Sent! Sachin will reply soon.</p>
       </form>
     </div>
   </div>
 </section>
 
-<footer id="footer"><p id="footer-txt"></p></footer>
+<footer><p id="footer-txt"></p></footer>
 
-<!-- ═══════ ADMIN LOGIN MODAL ═══════ -->
-<div class="modal-overlay hidden" id="login-overlay">
-  <div class="modal-box">
+<!-- ══ LOGIN MODAL ══ -->
+<div class="modal-bg hidden" id="login-modal">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-label="Admin Login">
     <div class="modal-head">
-      <span>🔐 Admin Access</span>
-      <button class="modal-close" id="login-close">✕</button>
+      <span>🔐 Admin Login</span>
+      <button class="icon-btn" id="login-close" aria-label="Close">✕</button>
     </div>
-    <p class="modal-sub">Enter your password to edit this portfolio.</p>
-    <input class="f-input" id="pw-input" type="password" placeholder="Password" autocomplete="current-password">
-    <p class="modal-err hidden" id="pw-err">Incorrect password. Try again.</p>
-    <button class="btn-primary w-full mt" id="pw-submit">Unlock Editor</button>
+    <p class="modal-sub">Authenticate with GitHub to edit this portfolio.<br>Your Personal Access Token never leaves your browser.</p>
+    <label class="f-label">GitHub Personal Access Token</label>
+    <input class="f-input" id="gh-token-input" type="password" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" autocomplete="off">
+    <label class="f-label mt8">GitHub Username</label>
+    <input class="f-input" id="gh-owner-input" type="text" placeholder="your-github-username">
+    <label class="f-label mt8">Repository Name</label>
+    <input class="f-input" id="gh-repo-input"  type="text" placeholder="your-repo-name">
+    <p class="modal-hint">Need a token? → GitHub → Settings → Developer Settings → Fine-grained Tokens → Contents: Write</p>
+    <p class="modal-err hidden" id="login-err">Authentication failed. Check token and try again.</p>
+    <button class="btn-primary w-full mt" id="login-submit">
+      <span id="login-btn-txt">Verify &amp; Unlock Editor</span>
+    </button>
   </div>
 </div>
 
-<!-- ═══════ ADMIN PANEL ═══════ -->
-<div class="admin-overlay hidden" id="admin-overlay"></div>
+<!-- ══ ADMIN PANEL ══ -->
+<div class="panel-overlay hidden" id="panel-overlay"></div>
 <aside class="admin-panel hidden" id="admin-panel" aria-hidden="true">
+
   <div class="ap-head">
-    <div class="ap-title">
-      <svg width="16" height="16" fill="none" stroke="var(--accent)" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+    <div class="ap-logo">
+      <svg width="15" height="15" fill="none" stroke="var(--accent)" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
       Live Editor
     </div>
-    <div style="display:flex;gap:8px;align-items:center;">
-      <button class="ap-save-gh" id="ap-save-gh" title="Push to GitHub">
+    <div class="ap-actions">
+      <button class="btn-push" id="btn-push" title="Push changes to GitHub">
         <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-        Push to GitHub
+        <span id="push-txt">Push to GitHub</span>
       </button>
-      <button class="ap-close" id="ap-close">✕</button>
+      <button class="icon-btn" id="panel-close" aria-label="Close panel">✕</button>
     </div>
   </div>
 
   <div class="ap-status hidden" id="ap-status"></div>
 
-  <div class="ap-tabs">
-    <button class="ap-tab active" data-tab="identity">Identity</button>
-    <button class="ap-tab" data-tab="hero">Hero</button>
-    <button class="ap-tab" data-tab="experience">Experience</button>
-    <button class="ap-tab" data-tab="projects">Projects</button>
-    <button class="ap-tab" data-tab="github">GitHub</button>
+  <div class="ap-tabs" role="tablist">
+    <button class="ap-tab active" data-tab="identity"   role="tab">Identity</button>
+    <button class="ap-tab"        data-tab="hero"       role="tab">Hero</button>
+    <button class="ap-tab"        data-tab="experience" role="tab">Experience</button>
+    <button class="ap-tab"        data-tab="projects"   role="tab">Projects</button>
+    <button class="ap-tab"        data-tab="settings"   role="tab">Settings</button>
   </div>
 
-  <!-- IDENTITY TAB -->
-  <div class="ap-body" id="tab-identity">
-    <div class="ap-section">Personal Info</div>
-    <div class="ef" data-k="name"        label="Full Name"></div>
-    <div class="ef" data-k="role"        label="Job Title"></div>
-    <div class="ef" data-k="tagline"     label="Status Tagline"></div>
-    <div class="ef" data-k="location"    label="Location"></div>
-    <div class="ef" data-k="email"       label="Email"></div>
-    <div class="ef" data-k="phone"       label="Phone"></div>
-    <div class="ef" data-k="linkedin"    label="LinkedIn URL"></div>
-    <div class="ef" data-k="github"      label="GitHub URL"></div>
-    <div class="ef" data-k="resumeFile"  label="Resume PDF filename" hint="Place the PDF in the same folder"></div>
-    <div class="ef" data-k="photoUrl"    label="Photo URL / filename" hint="Leave blank for initials avatar"></div>
-    <div class="ap-section">Appearance</div>
-    <div class="ef" data-k="accentColor" label="Accent colour (hex)" type="color"></div>
-    <div class="ap-section">Bio <small>(one paragraph per line)</small></div>
-    <div class="ef" data-k="bio" type="textarea" rows="6"></div>
-    <div class="ap-section">Admin Password</div>
-    <div class="ef" data-k="adminPassword" label="Password to unlock editor" type="password"></div>
+  <!-- IDENTITY -->
+  <div class="ap-body" id="tab-identity" role="tabpanel">
+    <div class="ap-sec">Personal Info</div>
+    <div class="ef" data-k="name"       data-label="Full Name"></div>
+    <div class="ef" data-k="role"       data-label="Job Title / Role"></div>
+    <div class="ef" data-k="tagline"    data-label="Status Tagline"></div>
+    <div class="ef" data-k="location"   data-label="Location"></div>
+    <div class="ef" data-k="email"      data-label="Email" data-type="email"></div>
+    <div class="ef" data-k="phone"      data-label="Phone"></div>
+    <div class="ef" data-k="linkedin"   data-label="LinkedIn URL" data-type="url"></div>
+    <div class="ef" data-k="github"     data-label="GitHub URL" data-type="url"></div>
+    <div class="ef" data-k="resumeFile" data-label="Resume PDF filename" data-hint="Place PDF in same folder as index.html"></div>
+    <div class="ef" data-k="photoUrl"   data-label="Photo URL / filename" data-hint="Leave blank for initials avatar"></div>
+    <div class="ap-sec">Appearance</div>
+    <div class="ef" data-k="accentColor" data-label="Accent colour" data-type="color"></div>
+    <div class="ap-sec">Bio <small>(one paragraph per line)</small></div>
+    <div class="ef" data-k="bio" data-type="textarea" data-rows="5"></div>
   </div>
 
-  <!-- HERO TAB -->
-  <div class="ap-body hidden" id="tab-hero">
-    <div class="ap-section">Stats</div>
-    <div id="ap-stats"></div>
-    <button class="btn-add" id="ap-add-stat">+ Add stat</button>
+  <!-- HERO STATS -->
+  <div class="ap-body hidden" id="tab-hero" role="tabpanel">
+    <div class="ap-sec">Hero Stats</div>
+    <div id="ap-stats-list"></div>
+    <button class="btn-add" id="add-stat">+ Add stat</button>
   </div>
 
-  <!-- EXPERIENCE TAB -->
-  <div class="ap-body hidden" id="tab-experience">
-    <div id="ap-exp"></div>
-    <button class="btn-add" id="ap-add-exp">+ Add role</button>
+  <!-- EXPERIENCE -->
+  <div class="ap-body hidden" id="tab-experience" role="tabpanel">
+    <div id="ap-exp-list"></div>
+    <button class="btn-add" id="add-exp">+ Add role</button>
   </div>
 
-  <!-- PROJECTS TAB -->
-  <div class="ap-body hidden" id="tab-projects">
-    <div id="ap-proj"></div>
-    <button class="btn-add" id="ap-add-proj">+ Add project</button>
+  <!-- PROJECTS (draggable) -->
+  <div class="ap-body hidden" id="tab-projects" role="tabpanel">
+    <div class="ap-sec">Drag cards to reorder · Changes reflect instantly</div>
+    <div id="ap-proj-list" class="drag-list"></div>
+    <button class="btn-add" id="add-proj">+ Add project</button>
   </div>
 
- <!-- GITHUB TAB -->
-<div class="ap-body" id="tab-github" style="display:none">
-  <div class="ap-section">GitHub Integration</div>
-
-  <p class="ef-hint">
-    When you click <strong>"Push to GitHub"</strong>, the updated
-    <code>config.json</code> file is committed directly to your repository.
-    Use a <strong>Fine-grained Personal Access Token</strong> with
-    <em>Contents: Write</em> permission on the repository.
-  </p>
-
-  <div class="ef" data-k="githubOwner" label="GitHub Username"></div>
-
-  <div class="ef"
-       data-k="githubRepo"
-       label="Repository Name"
-       hint="e.g. portfolio">
-  </div>
-
-  <div class="ef"
-       data-k="githubBranch"
-       label="Branch"
-       hint="usually: main">
-  </div>
-
-  <div class="ef"
-       data-k="githubToken"
-       label="Personal Access Token"
-       type="password"
-       hint="Keep this token private">
-  </div>
-
-  <div class="gh-steps">
-    <div class="gh-step">
-      <strong>1.</strong>
-      Go to GitHub → Settings → Developer Settings →
-      Personal Access Tokens → Fine-grained Tokens
+  <!-- SETTINGS -->
+  <div class="ap-body hidden" id="tab-settings" role="tabpanel">
+    <div class="ap-sec">GitHub Connection</div>
+    <div class="gh-info-box">
+      <div class="gh-status" id="gh-status-box">
+        <span class="gh-dot"></span>
+        <span id="gh-status-txt">Not connected</span>
+      </div>
+      <p class="hint-p">You authenticated via the login modal. Token is stored only in memory — cleared when you close this tab. Re-login if you refresh.</p>
     </div>
-
-    <div class="gh-step">
-      <strong>2.</strong>
-      Create a token → Select your portfolio repository →
-      Enable <em>Contents: Read and Write</em>
-    </div>
-
-    <div class="gh-step">
-      <strong>3.</strong>
-      Fill in GitHub Username, Repository, Branch and Token →
-      Click <strong>"Push to GitHub"</strong> to save changes to
-      <code>config.json</code>
-    </div>
+    <div class="ap-sec">Danger Zone</div>
+    <button class="btn-danger" id="btn-logout">🔓 Log Out of Admin</button>
+    <div class="ap-sec">Export</div>
+    <button class="btn-export" id="btn-export-json">📋 Copy config.json to clipboard</button>
   </div>
 </aside>
 
-  
 <script src="main.js"></script>
 </body>
 </html>
