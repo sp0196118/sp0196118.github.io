@@ -243,18 +243,56 @@
     <button class="btn-add" id="ap-add-proj">+ Add project</button>
   </div>
 
-  <!-- GITHUB TAB -->
-  <div class="ap-body" id="tab-github" style="display:none">
-    <div class="ap-section">GitHub Integration</div>
-    <p class="ef-hint">When you click "Push to GitHub", the updated <code>config.js</code> is committed directly to your repo. Use a <strong>Fine-grained Personal Access Token</strong> with <em>Contents: Write</em> permission on the repo.</p>
-    <div class="ef" data-k="githubOwner"  label="GitHub Username"></div>
-    <div class="ef" data-k="githubRepo"   label="Repository Name" hint="e.g. sachinpatel.github.io"></div>
-    <div class="ef" data-k="githubBranch" label="Branch" hint="usually: main"></div>
-    <div class="ef" data-k="githubToken"  label="Personal Access Token" type="password" hint="Keep this file PRIVATE"></div>
-    <div class="gh-steps">
-      <div class="gh-step"><strong>1.</strong> Go to github.com → Settings → Developer Settings → Personal Access Tokens → Fine-grained</div>
-      <div class="gh-step"><strong>2.</strong> Create token → select your portfolio repo → enable <em>Contents: Write</em></div>
-      <div class="gh-step"><strong>3.</strong> Paste token above and fill owner + repo → click "Push to GitHub" anytime to save live</div>
+ <!-- GITHUB TAB -->
+<div class="ap-body" id="tab-github" style="display:none">
+  <div class="ap-section">GitHub Integration</div>
+
+  <p class="ef-hint">
+    When you click <strong>"Push to GitHub"</strong>, the updated
+    <code>config.json</code> file is committed directly to your repository.
+    Use a <strong>Fine-grained Personal Access Token</strong> with
+    <em>Contents: Write</em> permission on the repository.
+  </p>
+
+  <div class="ef" data-k="githubOwner" label="GitHub Username"></div>
+
+  <div class="ef"
+       data-k="githubRepo"
+       label="Repository Name"
+       hint="e.g. portfolio">
+  </div>
+
+  <div class="ef"
+       data-k="githubBranch"
+       label="Branch"
+       hint="usually: main">
+  </div>
+
+  <div class="ef"
+       data-k="githubToken"
+       label="Personal Access Token"
+       type="password"
+       hint="Keep this token private">
+  </div>
+
+  <div class="gh-steps">
+    <div class="gh-step">
+      <strong>1.</strong>
+      Go to GitHub → Settings → Developer Settings →
+      Personal Access Tokens → Fine-grained Tokens
+    </div>
+
+    <div class="gh-step">
+      <strong>2.</strong>
+      Create a token → Select your portfolio repository →
+      Enable <em>Contents: Read and Write</em>
+    </div>
+
+    <div class="gh-step">
+      <strong>3.</strong>
+      Fill in GitHub Username, Repository, Branch and Token →
+      Click <strong>"Push to GitHub"</strong> to save changes to
+      <code>config.json</code>
     </div>
   </div>
 </aside>
