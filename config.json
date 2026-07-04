@@ -1,6 +1,6 @@
 {
   "name": "Sachin Patel",
-  "role": "Data Scientist",
+  "role": "Operations Research Scientist",
   "tagline": "Open to Work · India",
   "location": "New Delhi, India",
   "email": "sp0196118@gmail.com",
@@ -23,7 +23,7 @@
     { "value": "AIR 60", "label": "IIT JAM 2022" }
   ],
   "education": [
-    { "degree": "M.Sc. — Operations Research",  "institution": "Indian Institute of Technology, Bombay",            "grade": "8.6 / 10", "year": "2022–2024" },
+    { "degree": "M.Sc. — Industrial Engineering & Operations Research",  "institution": "Indian Institute of Technology, Bombay",            "grade": "8.6 / 10", "year": "2022–2024" },
     { "degree": "B.Sc. — Operational Research", "institution": "Deen Dayal Upadhyaya College, University of Delhi", "grade": "8.8 / 10", "year": "2019–2022" },
     { "degree": "12th — CBSE",                  "institution": "CBSE Board",                                        "grade": "91%",       "year": "2019" },
     { "degree": "10th — CBSE",                  "institution": "CBSE Board",                                        "grade": "84%",       "year": "2017" }
