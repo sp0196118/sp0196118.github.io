@@ -1,6 +1,6 @@
 /**
  * ═══════════════════════════════════════════════════════════
- *  PORTFOLIO main.js  v4
+ *  PORTFOLIO main.js  v4 (fixed)
  *
  *  • Loads data from config.json (fetch)
  *  • Particle canvas background
@@ -41,16 +41,18 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Pre-fill SESSION from config if set
   if (C.githubBranch) SESSION.branch = C.githubBranch;
 
-  renderAll();
-  initCanvas();
-  initTheme();
-  initNav();
-  initHeroScroll();
-  initContactForm();
-  initAdmin();
-  initReveal();
+  // FIX: each init step is isolated so one failure can never block
+  // the others — most importantly, it can never block hiding the loader.
+  const steps = [
+    renderAll, initCanvas, initTheme, initNav,
+    initHeroScroll, initContactForm, initAdmin, initReveal
+  ];
+  steps.forEach(fn => {
+    try { fn(); }
+    catch (err) { console.error(`[init error] ${fn.name}:`, err); }
+  });
 
-  // Hide loader
+  // Hide loader — now guaranteed to run regardless of the steps above
   setTimeout(() => {
     const l = document.getElementById('loader');
     l.classList.add('out');
@@ -67,7 +69,6 @@ function animateLoader() {
     fill.style.width = w + '%';
     if (w >= 90) clearInterval(t);
   }, 80);
-  // complete bar when render finishes (called externally via renderAll)
   window._loaderDone = () => { fill.style.width = '100%'; };
 }
 
@@ -133,7 +134,6 @@ function initNav() {
 }
 
 function initHeroScroll() {
-  // Nav active state on scroll
   const secs = ['hero','about','skills','experience','projects','achievements','contact'];
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
@@ -147,11 +147,17 @@ function initHeroScroll() {
   secs.forEach(id => { const el = document.getElementById(id); if (el) io.observe(el); });
 }
 
+// FIX: guard against missing #contact-form / #form-ok so this can never
+// throw and block the rest of the boot sequence (this was the bug that
+// froze the loading screen on the live site).
 function initContactForm() {
-  document.getElementById('contact-form').addEventListener('submit', e => {
+  const form = document.getElementById('contact-form');
+  const ok   = document.getElementById('form-ok');
+  if (!form) { console.warn('[initContactForm] #contact-form not found — skipping'); return; }
+  form.addEventListener('submit', e => {
     e.preventDefault();
-    e.target.style.display = 'none';
-    document.getElementById('form-ok').classList.remove('hidden');
+    form.style.display = 'none';
+    if (ok) ok.classList.remove('hidden');
   });
 }
 
@@ -163,6 +169,7 @@ const IC = {
   linkedin: `<svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>`,
   github:   `<svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>`,
   ext:      `<svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`,
+  trophy:   `<svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 01-10 0V4z"/><path d="M17 5h3a2 2 0 01-2 5M7 5H4a2 2 0 002 5"/></svg>`,
 };
 
 /* ═══ RENDERERS ════════════════════════════════════════════ */
@@ -191,7 +198,6 @@ function rHero() {
   document.getElementById('hero-bio').innerHTML       = C.bio.map(p=>`<p>${p}</p>`).join('');
   const dl = document.getElementById('hero-dl');
   dl.href = C.resumeFile || '#'; dl.style.display = C.resumeFile ? '' : 'none';
-  // avatar
   const av = document.getElementById('avatar-img');
   if (C.photoUrl?.trim()) {
     av.innerHTML = `<img src="${C.photoUrl.trim()}" alt="${esc(C.name)}">`;
@@ -272,11 +278,14 @@ function rProjects() {
     </div>`).join('');
 }
 
+// FIX: config.json stores {title, subtitle} for achievements, not
+// {title, icon, desc}. Render subtitle and fall back to a default
+// trophy icon instead of printing the literal string "undefined".
 function rAch() {
   document.getElementById('ach-grid').innerHTML = C.achievements.map(a=>`
     <div class="ach-card rv">
-      <div class="ach-icon">${a.icon}</div>
-      <div><div class="ach-title">${esc(a.title)}</div><div class="ach-desc">${esc(a.desc)}</div></div>
+      <div class="ach-icon">${a.icon || IC.trophy}</div>
+      <div><div class="ach-title">${esc(a.title)}</div><div class="ach-desc">${esc(a.subtitle ?? a.desc ?? '')}</div></div>
     </div>`).join('');
 }
 
@@ -309,8 +318,6 @@ function initReveal() {
 
 /* ═══════════════════════════════════════════════════════════
    ADMIN — SERVERLESS GITHUB AUTH
-   No backend. PAT is verified against the GitHub API in-browser.
-   It's stored only in SESSION memory — clears on tab close.
 ═══════════════════════════════════════════════════════════ */
 function initAdmin() {
   const loginModal   = document.getElementById('login-modal');
@@ -355,7 +362,6 @@ function initAdmin() {
   panelClose.addEventListener('click', closePanel);
   overlay.addEventListener('click', closePanel);
 
-  /* ── VERIFY TOKEN against GitHub API (serverless auth) ── */
   loginSubmit.addEventListener('click', async () => {
     const token = document.getElementById('gh-token-input').value.trim();
     const owner = document.getElementById('gh-owner-input').value.trim();
@@ -371,7 +377,6 @@ function initAdmin() {
     loginErr.classList.add('hidden');
 
     try {
-      // Verify token has access to the repo by reading its metadata
       const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`, {
         headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' }
       });
@@ -385,7 +390,6 @@ function initAdmin() {
         throw new Error('Token has read-only access. Enable "Contents: Write" permission.');
       }
 
-      // Auth success — store in memory only
       SESSION.token  = token;
       SESSION.owner  = owner;
       SESSION.repo   = repo;
@@ -403,12 +407,10 @@ function initAdmin() {
     }
   });
 
-  /* Enter key on password fields */
   ['gh-token-input','gh-owner-input','gh-repo-input'].forEach(id=>{
     document.getElementById(id).addEventListener('keydown', e=>{ if(e.key==='Enter') loginSubmit.click(); });
   });
 
-  /* ── TAB SWITCHING ── */
   document.querySelectorAll('.ap-tab').forEach(tab=>{
     tab.addEventListener('click', ()=>{
       document.querySelectorAll('.ap-tab').forEach(t=>t.classList.remove('active'));
@@ -421,7 +423,6 @@ function initAdmin() {
   });
   document.getElementById('tab-identity').style.display = 'flex';
 
-  /* ── PUSH TO GITHUB ── */
   pushBtn.addEventListener('click', async ()=>{
     if (!SESSION.authed) {
       showStatus('Not authenticated. Please log in again.','err'); return;
@@ -432,7 +433,6 @@ function initAdmin() {
       const apiUrl = `https://api.github.com/repos/${SESSION.owner}/${SESSION.repo}/contents/config.json`;
       const headers = { Authorization:`Bearer ${SESSION.token}`, Accept:'application/vnd.github+json', 'Content-Type':'application/json' };
 
-      // Get current SHA
       let sha = null;
       try {
         const g = await fetch(`${apiUrl}?ref=${SESSION.branch}`, {headers});
@@ -458,14 +458,12 @@ function initAdmin() {
     }
   });
 
-  /* ── LOGOUT ── */
   document.getElementById('btn-logout').addEventListener('click', ()=>{
     SESSION = {token:null,owner:null,repo:null,branch:'main',authed:false};
     closePanel();
     showStatus('','');
   });
 
-  /* ── EXPORT JSON ── */
   document.getElementById('btn-export-json').addEventListener('click', ()=>{
     const json = JSON.stringify(C, null, 2);
     navigator.clipboard?.writeText(json).then(()=>{
@@ -502,10 +500,9 @@ function buildEditor() {
   buildProjEditor();
 }
 
-/* ── Convert .ef[data-k] placeholder divs into real inputs ── */
 function buildFieldDivs() {
   document.querySelectorAll('.ef[data-k]').forEach(div=>{
-    if (div.classList.contains('built')) return; // idempotent
+    if (div.classList.contains('built')) return;
     div.classList.add('built');
     const k     = div.dataset.k;
     const label = div.dataset.label || k;
@@ -556,11 +553,9 @@ function buildFieldDivs() {
   });
 }
 
-// Store original type info so we know which keys are arrays
 let CONFIG_ORIG = null;
 const _origBoot = setInterval(()=>{ if(C){ CONFIG_ORIG=JSON.parse(JSON.stringify(C)); clearInterval(_origBoot); } },50);
 
-/* ── Hero stats ── */
 function buildStatsEditor() {
   const el = document.getElementById('ap-stats-list');
   el.innerHTML = '';
@@ -581,7 +576,6 @@ function buildStatsEditor() {
   document.getElementById('add-stat').onclick = ()=>{ C.heroStats.push({value:'',label:''}); buildStatsEditor(); rHero(); initReveal(); };
 }
 
-/* ── Experience ── */
 function buildExpEditor() {
   const el = document.getElementById('ap-exp-list');
   el.innerHTML = '';
@@ -611,11 +605,6 @@ function buildExpEditor() {
   document.getElementById('add-exp').onclick = ()=>{ C.experience.push({period:'',role:'New Role',company:'',location:'India',type:'Full-time',bullets:['']});buildExpEditor();rExp();initReveal(); };
 }
 
-/* ═══════════════════════════════════════════════════════════
-   PROJECTS EDITOR — DRAGGABLE REORDERING
-   Uses HTML5 drag-and-drop. Each card has a drag handle (⠿).
-   Dragging reorders C.projects array and re-renders live.
-═══════════════════════════════════════════════════════════ */
 function buildProjEditor() {
   const list = document.getElementById('ap-proj-list');
   list.innerHTML = '';
@@ -623,7 +612,7 @@ function buildProjEditor() {
   C.projects.forEach((p,i)=>{
     const card = mk('div','ef-card');
     card.dataset.idx = i;
-    card.draggable   = false; // only draggable via handle
+    card.draggable   = false;
 
     card.innerHTML = `
       <div class="ef-card-head">
@@ -639,7 +628,6 @@ function buildProjEditor() {
 
     list.appendChild(card);
 
-    // Field change handlers
     card.querySelectorAll('[data-pk]').forEach(inp=>{
       inp.addEventListener('input', ()=>{
         const k=inp.dataset.pk;
@@ -650,7 +638,6 @@ function buildProjEditor() {
     });
     card.querySelector('.ef-del').addEventListener('click',()=>{ C.projects.splice(i,1); buildProjEditor(); rProjects(); initReveal(); });
 
-    // ── DRAG HANDLE ──
     const handle = card.querySelector('.drag-handle');
     handle.addEventListener('mousedown', ()=>{ card.draggable = true; });
     handle.addEventListener('touchstart', ()=>{ card.draggable = true; }, {passive:true});
@@ -676,5 +663,4 @@ function buildProjEditor() {
   };
 }
 
-/* ── DOM helper ── */
 function mk(tag, cls) { const el=document.createElement(tag); el.className=cls; return el; }
