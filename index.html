@@ -13,10 +13,9 @@
 <title>Sachin Patel — Operations Research Scientist</title>
 </head>
 <body>
- 
+
 <canvas id="bg-canvas"></canvas>
- 
-<!-- ══ LOADING SCREEN ══ -->
+
 <div id="loader">
   <div class="loader-inner">
     <div class="loader-logo">SP</div>
@@ -24,8 +23,7 @@
     <div class="loader-txt">Loading portfolio…</div>
   </div>
 </div>
- 
-<!-- ══ NAV ══ -->
+
 <nav id="nav">
   <div class="nav-inner">
     <a class="nav-logo" id="nav-logo" href="#hero"></a>
@@ -52,8 +50,7 @@
     </div>
   </div>
 </nav>
- 
-<!-- ══ HERO ══ -->
+
 <section id="hero">
   <div class="hero-inner">
     <div class="hero-left">
@@ -87,11 +84,9 @@
   </div>
   <div class="hero-scroll"><div class="scroll-line"></div><span>scroll</span></div>
 </section>
- 
-<!-- ══ TICKER ══ -->
+
 <div class="ticker-wrap"><div class="ticker" id="ticker"></div></div>
- 
-<!-- ══ ABOUT ══ -->
+
 <section id="about" class="sec">
   <div class="sec-inner">
     <div class="sec-label">Background</div>
@@ -106,8 +101,7 @@
     <div class="fact-strip" id="fact-strip"></div>
   </div>
 </section>
- 
-<!-- ══ SKILLS ══ -->
+
 <section id="skills" class="sec alt">
   <div class="sec-inner">
     <div class="sec-label">Stack</div>
@@ -115,8 +109,7 @@
     <div class="skills-grid" id="skills-grid"></div>
   </div>
 </section>
- 
-<!-- ══ EXPERIENCE ══ -->
+
 <section id="experience" class="sec">
   <div class="sec-inner">
     <div class="sec-label">Career</div>
@@ -124,8 +117,7 @@
     <div class="timeline" id="timeline"></div>
   </div>
 </section>
- 
-<!-- ══ PROJECTS ══ -->
+
 <section id="projects" class="sec alt">
   <div class="sec-inner">
     <div class="sec-label">Work</div>
@@ -133,8 +125,7 @@
     <div class="projects-grid" id="projects-grid"></div>
   </div>
 </section>
- 
-<!-- ══ ACHIEVEMENTS ══ -->
+
 <section id="achievements" class="sec">
   <div class="sec-inner">
     <div class="sec-label">Recognition</div>
@@ -142,8 +133,7 @@
     <div class="ach-grid" id="ach-grid"></div>
   </div>
 </section>
- 
-<!-- ══ CONTACT ══ -->
+
 <section id="contact" class="sec alt">
   <div class="sec-inner">
     <div class="sec-label">Connect</div>
@@ -153,7 +143,7 @@
         <p class="contact-blurb">Open to Operations Research, Optimization, and Decision Science opportunities across India.</p>
         <div class="contact-links" id="contact-links"></div>
       </div>
-      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
         <input class="f-input" type="text" name="name" placeholder="Your name" required>
         <input class="f-input" type="email" name="email" placeholder="your@email.com" required>
@@ -165,13 +155,15 @@
         </button>
         <input type="hidden" name="redirect" value="https://sp0196118.github.io/thankyou.html">
       </form>
+      <div id="form-ok" class="hidden" style="text-align:center;padding:2rem;color:var(--a,#00D4AA);font-weight:600;">
+        ✓ Message sent — thank you! I'll get back to you soon.
+      </div>
     </div>
   </div>
 </section>
- 
+
 <footer><p id="footer-txt"></p></footer>
- 
-<!-- ══ LOGIN MODAL ══ -->
+
 <div class="modal-bg hidden" id="login-modal">
   <div class="modal-box" role="dialog" aria-modal="true" aria-label="Admin Login">
     <div class="modal-head">
@@ -192,11 +184,10 @@
     </button>
   </div>
 </div>
- 
-<!-- ══ ADMIN PANEL ══ -->
+
 <div class="panel-overlay hidden" id="panel-overlay"></div>
 <aside class="admin-panel hidden" id="admin-panel" aria-hidden="true">
- 
+
   <div class="ap-head">
     <div class="ap-logo">
       <svg width="15" height="15" fill="none" stroke="var(--accent)" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
@@ -210,9 +201,9 @@
       <button class="icon-btn" id="panel-close" aria-label="Close panel">✕</button>
     </div>
   </div>
- 
+
   <div class="ap-status hidden" id="ap-status"></div>
- 
+
   <div class="ap-tabs" role="tablist">
     <button class="ap-tab active" data-tab="identity"   role="tab">Identity</button>
     <button class="ap-tab"        data-tab="hero"       role="tab">Hero</button>
@@ -220,8 +211,7 @@
     <button class="ap-tab"        data-tab="projects"   role="tab">Projects</button>
     <button class="ap-tab"        data-tab="settings"   role="tab">Settings</button>
   </div>
- 
-  <!-- IDENTITY -->
+
   <div class="ap-body" id="tab-identity" role="tabpanel">
     <div class="ap-sec">Personal Info</div>
     <div class="ef" data-k="name"       data-label="Full Name"></div>
@@ -239,28 +229,24 @@
     <div class="ap-sec">Bio <small>(one paragraph per line)</small></div>
     <div class="ef" data-k="bio" data-type="textarea" data-rows="5"></div>
   </div>
- 
-  <!-- HERO STATS -->
+
   <div class="ap-body hidden" id="tab-hero" role="tabpanel">
     <div class="ap-sec">Hero Stats</div>
     <div id="ap-stats-list"></div>
     <button class="btn-add" id="add-stat">+ Add stat</button>
   </div>
- 
-  <!-- EXPERIENCE -->
+
   <div class="ap-body hidden" id="tab-experience" role="tabpanel">
     <div id="ap-exp-list"></div>
     <button class="btn-add" id="add-exp">+ Add role</button>
   </div>
- 
-  <!-- PROJECTS (draggable) -->
+
   <div class="ap-body hidden" id="tab-projects" role="tabpanel">
     <div class="ap-sec">Drag cards to reorder · Changes reflect instantly</div>
     <div id="ap-proj-list" class="drag-list"></div>
     <button class="btn-add" id="add-proj">+ Add project</button>
   </div>
- 
-  <!-- SETTINGS -->
+
   <div class="ap-body hidden" id="tab-settings" role="tabpanel">
     <div class="ap-sec">GitHub Connection</div>
     <div class="gh-info-box">
@@ -276,7 +262,7 @@
     <button class="btn-export" id="btn-export-json">📋 Copy config.json to clipboard</button>
   </div>
 </aside>
- 
+
 <script src="main.js"></script>
 </body>
 </html>
