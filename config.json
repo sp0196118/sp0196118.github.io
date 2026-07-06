@@ -1,7 +1,7 @@
 {
   "name": "Sachin Patel",
   "role": "Operations Research Scientist",
-  "tagline": "Open to Work · India",
+  "tagline": "Optimization Engineer · Mathematical Modeling · Decision Intelligence",
   "location": "New Delhi, India",
   "email": "sp0196118@gmail.com",
   "phone": "+91-6232610569",
@@ -9,124 +9,300 @@
   "github": "https://github.com/sp0196118/",
   "resumeFile": "Sachin_Patel_Resume.pdf",
   "photoUrl": "sachin_photo.jpg",
+
   "accentColor": "#00D4AA",
+
   "githubOwner": "sp0196118",
   "githubRepo": "https://github.com/sp0196118/sp0196118.github.io",
   "githubBranch": "main",
+
   "bio": [
-  "M.Sc. in <strong>Operations Research</strong> from <strong>IIT Bombay</strong> · Building optimization models, mathematical algorithms, and decision-support systems for complex real-world problems.",
-  "I develop <strong>optimization solutions</strong>, <strong>Python-based OR applications</strong>, and <strong>data-driven decision models</strong> across supply chain, logistics, scheduling, and resource optimization."
+    "M.Sc. in <strong>Industrial Engineering & Operations Research</strong> from <strong>IIT Bombay</strong> with <strong>1.5+ years</strong> of experience building production-grade optimization systems for logistics and supply chain.",
+    "I design <strong>MILP</strong>, <strong>Vehicle Routing</strong>, and <strong>network optimization models</strong>, develop scalable <strong>Python optimization pipelines</strong>, and build <strong>decision intelligence platforms</strong> that solve complex real-world business problems."
   ],
+
   "heroStats": [
-    { "value": "1.5+",   "label": "Years Experience" },
-    { "value": "40%",    "label": "Reporting Time Saved" },
-    { "value": "AIR 60", "label": "IIT JAM 2022" }
+    {
+      "value": "1.5+",
+      "label": "Years Experience"
+    },
+    {
+      "value": "150+",
+      "label": "Daily Routes Optimized"
+    },
+    {
+      "value": "10%",
+      "label": "Fleet Cost Reduction"
+    },
+    {
+      "value": "AIR 60",
+      "label": "IIT JAM"
+    }
   ],
   "education": [
-    { "degree": "M.Sc. — Industrial Engineering & Operations Research",  "institution": "Indian Institute of Technology, Bombay",            "grade": "8.6 / 10", "year": "2022–2024" },
-    { "degree": "B.Sc. — Operational Research", "institution": "Deen Dayal Upadhyaya College, University of Delhi", "grade": "8.8 / 10", "year": "2019–2022" },
-    { "degree": "12th — CBSE",                  "institution": "CBSE Board",                                        "grade": "91%",       "year": "2019" },
-    { "degree": "10th — CBSE",                  "institution": "CBSE Board",                                        "grade": "84%",       "year": "2017" }
+    {
+      "degree": "M.Sc. Industrial Engineering & Operations Research",
+      "institution": "Indian Institute of Technology Bombay",
+      "grade": "CGPA: 8.6/10",
+      "year": "2022 – 2024"
+    },
+    {
+      "degree": "B.Sc. Operational Research",
+      "institution": "Deen Dayal Upadhyaya College, University of Delhi",
+      "grade": "CGPA: 8.8/10",
+      "year": "2019 – 2022"
+    },
+    {
+      "degree": "Senior Secondary (CBSE)",
+      "institution": "Jawahar Navodaya Vidyalaya",
+      "grade": "91%",
+      "year": "2019"
+    },
+    {
+      "degree": "Secondary (CBSE)",
+      "institution": "Jawahar Navodaya Vidyalaya",
+      "grade": "84%",
+      "year": "2017"
+    }
   ],
   "certifications": [
-    { "issuer": "NPTEL",       "title": "Data Science for Engineers · Elite Silver" },
-    { "issuer": "IBM",         "title": "Python for Data Science" },
-    { "issuer": "Internshala", "title": "Machine Learning Training" }
+    {
+      "issuer": "NPTEL",
+      "title": "Data Science for Engineers",
+      "credential": "Elite Silver"
+    },
+    {
+      "issuer": "IBM",
+      "title": "Python for Data Science"
+    },
+    {
+      "issuer": "Internshala",
+      "title": "Machine Learning Training"
+    }
   ],
   "hobbies": ["🏸 Badminton", "🏏 Cricket", "🏋️ Gym"],
   "skills": [
-    { "category": "SQL & Databases",           "highlights": ["Advanced SQL","MongoDB"],       "others": ["CTEs","Window Functions","Aggregations","MySQL","PostgreSQL"] },
-    { "category": "Python & Automation",       "highlights": ["Python","Pandas"],              "others": ["NumPy","Scikit-learn","ETL Pipelines","Jupyter Notebooks","Modular Code"] },
-    { "category": "Machine Learning",          "highlights": ["XGBoost","Scikit-learn"],       "others": ["Regression","Classification","Clustering","PCA","Random Forest","SVM"] },
-    { "category": "Time Series & Forecasting", "highlights": ["Demand Forecasting"],           "others": ["MAPE / SMAPE","Trend Modelling","Seasonality","Inventory Optimization"] },
-    { "category": "Optimisation",              "highlights": ["Pyomo","Gurobi"],               "others": ["CBC","GLPK","MILP","VRP","Linear Programming"] },
-    { "category": "Analytics & Cloud",         "highlights": [],                               "others": ["Financial Report Automation","Dashboard Analytics","Matplotlib","Seaborn","Git","AWS (basic)"] }
-  ],
+  {
+    "category": "Optimization",
+    "highlights": [
+      "MILP",
+      "Vehicle Routing",
+      "Pyomo",
+      "Gurobi"
+    ],
+    "others": [
+      "OR-Tools",
+      "PuLP",
+      "CBC",
+      "GLPK",
+      "Network Optimization",
+      "Constraint Programming",
+      "Linear Programming",
+      "Integer Programming"
+    ]
+  },
+  {
+    "category": "Programming",
+    "highlights": [
+      "Python",
+      "SQL"
+    ],
+    "others": [
+      "MongoDB",
+      "Pandas",
+      "NumPy",
+      "Git",
+      "REST APIs",
+      "Airflow"
+    ]
+  },
+  {
+    "category": "Supply Chain Analytics",
+    "highlights": [
+      "Logistics Optimization",
+      "Route Planning"
+    ],
+    "others": [
+      "Demand Forecasting",
+      "GPS Analytics",
+      "Data Validation",
+      "Scheduling",
+      "Decision Support Systems"
+    ]
+  },
+  {
+    "category": "AI & Data Science",
+    "highlights": [
+      "LLMs",
+      "Scikit-learn"
+    ],
+    "others": [
+      "Forecasting",
+      "Statistical Modeling",
+      "Prompt Engineering",
+      "XGBoost"
+    ]
+  }
+],
   "experience": [
+  {
+    "period": "Jul 2024 – Jan 2025",
+    "role": "Operations Research Scientist",
+    "company": "Caliper Business Solutions",
+    "location": "India",
+    "type": "Full-time",
+    "bullets": [
+      "Designed and deployed <strong>MILP</strong> and <strong>Vehicle Routing Problem (VRP)</strong> optimization models in <strong>Pyomo</strong> using <strong>Gurobi</strong>, <strong>CBC</strong>, and <strong>GLPK</strong> for large-scale logistics planning.",
+      "Reduced fleet operating costs and improved vehicle utilization by <strong>10%</strong> across <strong>150+ daily routes</strong> through production optimization models.",
+      "Built backend <strong>Python</strong> APIs for GPS route analytics and validation, processing <strong>50K+</strong> GPS records while reducing route analysis time by <strong>30%</strong>.",
+      "Developed automated <strong>SQL</strong> and <strong>MongoDB</strong> ETL pipelines with <strong>Airflow</strong> to support daily optimization workflows and applied machine learning models to improve forecasting accuracy."
+    ]
+  },
+
+  {
+    "period": "May 2023 – Jun 2024",
+    "role": "Operations Research Intern",
+    "company": "Caliper Business Solutions",
+    "location": "India",
+    "type": "Internship",
+    "bullets": [
+      "Developed customized <strong>Vehicle Routing Problem (VRP)</strong> models using <strong>Pyomo</strong> with commercial and open-source optimization solvers.",
+      "Reduced route planning time from <strong>6 hours to 2 hours</strong>, enabling daily optimization and scheduling updates.",
+      "Automated data collection, preprocessing, and validation pipelines using <strong>Python</strong> for large logistics datasets.",
+      "Validated routing strategies that contributed to approximately <strong>10%</strong> reductions in vehicle usage and transportation costs."
+    ]
+  }
+],
+  "projects": [
+  {
+    "title": "LLM-Powered Operations Research Solver",
+    "desc": "AI-powered platform that converts natural-language business problems into MILP formulations by automatically extracting objectives, constraints, and decision variables, reducing optimization model development from hours to minutes.",
+    "metric": "🤖 Natural Language → Optimization Model",
+    "tags": [
+      "LLM",
+      "MILP",
+      "Pyomo",
+      "Optimization",
+      "Streamlit"
+    ],
+    "link": "https://llm-or-solver-9xns3mj9owta7knv9vrqfn.streamlit.app/"
+  },
+
+  {
+    "title": "Supply Chain Digital Twin",
+    "desc": "Interactive digital twin for logistics operations integrating optimization, simulation, demand forecasting, KPI monitoring, and scenario analysis for supply chain decision intelligence.",
+    "metric": "🚚 Decision Intelligence Platform",
+    "tags": [
+      "Optimization",
+      "Simulation",
+      "Supply Chain",
+      "Python"
+    ],
+    "link": "https://github.com/sp0196118/Emergent-Supply-Chain-Intelligence-Platform"
+  },
+
+  {
+    "title": "EV Charging Grid Orchestration",
+    "desc": "Optimized EV charging infrastructure using demand clustering and Set Cover optimization to maximize geographic coverage while minimizing installation costs.",
+    "metric": "⚡ 90%+ Coverage",
+    "tags": [
+      "Set Cover",
+      "Optimization",
+      "DBSCAN",
+      "Streamlit"
+    ],
+    "link": "https://sp0196118.github.io/EV-Charging-Grid-Orchestration/"
+  },
+
+  {
+    "title": "Dark Kitchen Delivery Zone Optimizer",
+    "desc": "Facility location optimization model that determines optimal cloud kitchen locations using demand clustering and mathematical programming to improve delivery efficiency.",
+    "metric": "🍔 Facility Location Optimization",
+    "tags": [
+      "Facility Location",
+      "Optimization",
+      "PuLP",
+      "Folium"
+    ],
+    "link": "https://dark-kitchen-wftmpywm3hjypwp67eqrrc.streamlit.app/"
+  },
+
+  {
+    "title": "Dynamic Pricing Engine",
+    "desc": "Optimization-driven pricing system combining demand forecasting and price elasticity models to recommend profit-maximizing product prices.",
+    "metric": "💰 Up to 22% Higher Profit",
+    "tags": [
+      "Optimization",
+      "Forecasting",
+      "Machine Learning",
+      "Pricing"
+    ],
+    "link": "https://dynamic-pricing-ahjjvzvxnkxwpq3r5bhwqb.streamlit.app/"
+  },
+
+  {
+    "title": "Hospital Resource Allocation Optimizer",
+    "desc": "Mixed Integer Programming model for hospital workforce scheduling and bed allocation, balancing staffing requirements, labor constraints, and patient demand.",
+    "metric": "🏥 Healthcare Optimization",
+    "tags": [
+      "MILP",
+      "Scheduling",
+      "Healthcare",
+      "Pyomo"
+    ],
+    "link": "https://hospital-scheduling-qs9zxmieo7vnwhppip6hxu.streamlit.app/"
+  },
+
+  {
+    "title": "IPL Team Selection Optimizer",
+    "desc": "Integer Programming model that selects an optimal cricket squad under budget, role, and team composition constraints using player performance analytics.",
+    "metric": "🏏 Sports Optimization",
+    "tags": [
+      "Integer Programming",
+      "Optimization",
+      "Sports Analytics"
+    ],
+    "link": "https://cricket-optimizer-fp5uqn2hlnxdbaramehpnn.streamlit.app/"
+  },
+
+  {
+    "title": "Vehicle Routing Optimization Engine",
+    "desc": "Production-inspired Vehicle Routing Problem solver implementing routing optimization with Pyomo and commercial/open-source solvers for logistics planning.",
+    "metric": "🚛 VRP Optimization",
+    "tags": [
+      "VRP",
+      "Pyomo",
+      "Gurobi",
+      "OR-Tools"
+    ],
+    "link": ""
+  },
+
+  {
+    "title": "Kernel Canonical Correlation Analysis",
+    "desc": "M.Sc. research extending Canonical Correlation Analysis using kernel methods to capture nonlinear relationships between datasets through optimization-based learning.",
+    "metric": "🎓 Research Thesis",
+    "tags": [
+      "Kernel Methods",
+      "Optimization",
+      "Research",
+      "Machine Learning"
+    ],
+    "link": ""
+  }
+],
+   "achievements": [
     {
-      "period": "May 2023 – Jan 2025",
-      "role": "Operations Research Scientist",
-      "company": "Caliper Business Solutions",
-      "location": "India",
-      "type": "Full-time",
-      "bullets": [
-        "Built <strong>Python-based ETL pipelines</strong> & <strong>automated data pipelines</strong> for GPS/operational datasets — eliminated manual Excel-heavy workflows",
-        "Wrote <strong>advanced SQL queries</strong> (CTEs, window functions, aggregations) on <strong>MongoDB</strong> & relational DBs for financial & operational reporting",
-        "Automated recurring <strong>finance reports</strong> & <strong>stakeholder data delivery</strong> — cut manual effort ~40%",
-        "Delivered <strong>optimisation models</strong> in production → up to 10% reduction in operational costs"
-      ]
+      "title": "AIR 60",
+      "subtitle": "IIT JAM Mathematics 2022"
     },
     {
-      "period": "~3 Months (2022)",
-      "role": "Operations Research Intern",
-      "company": "Caliper Business Solutions",
-      "location": "India",
-      "type": "Internship",
-      "bullets": [
-        "Preprocessed large datasets with <strong>Python & SQL</strong> to boost analytics accuracy",
-        "Modelled routing solutions → ~10% reduction in vehicle usage"
-      ]
+      "title": "Elite Silver",
+      "subtitle": "NPTEL Data Science for Engineers"
+    },
+    {
+      "title": "JNV Scholar",
+      "subtitle": "Selected through Jawahar Navodaya Vidyalaya Entrance Examination"
     }
-  ],
-  "projects": [
-
-        {
-        "title": "EV Charging Grid Orchestration",
-        "desc": "Optimized EV charging station placement using demand clustering and mathematical optimization to maximize coverage under budget constraints.",
-        "metric": "⚡ Smart EV infrastructure planning",
-        "tags": ["DBSCAN", "Set Cover", "Optimization", "Streamlit"],
-        "link": "https://sp0196118.github.io/EV-Charging-Grid-Orchestration/"
-        },
-           
-        {
-        "title": "Dark Kitchen Delivery Zone Optimizer",
-        "desc": "Optimized dark kitchen locations using demand clustering and facility location optimization to improve delivery coverage and reduce operational costs.",
-        "metric": "🍔 Smart delivery network planning",
-        "tags": ["DBSCAN", "Facility Location", "PuLP", "Folium"],
-        "link": "https://dark-kitchen-wftmpywm3hjypwp67eqrrc.streamlit.app/"
-        },
-
-        {
-        "title": "IPL Cricket Team Selector",
-        "desc": "Built a data-driven team selection engine that ranks players and generates the optimal playing XI under budget and role constraints.",
-        "metric": "🏏 Optimization-based squad selection",
-        "tags": ["ILP", "Sports Analytics", "Python", "Streamlit"],
-        "link": "https://cricket-optimizer-fp5uqn2hlnxdbaramehpnn.streamlit.app/"
-        },
-
-        {
-        "title": "Dynamic Pricing Engine",
-        "desc": "Developed a pricing optimization model that recommends profit-maximizing product prices based on demand elasticity and market conditions.",
-        "metric": "💰 Up to 22% profit improvement",
-        "tags": ["Machine Learning", "Optimization", "Pricing"],
-        "link": "https://dynamic-pricing-ahjjvzvxnkxwpq3r5bhwqb.streamlit.app/"
-        },
-
-        {
-        "title": "Hospital Bed & Staff Allocation Optimizer",
-        "desc": "Combined demand forecasting and workforce scheduling to optimize hospital staffing levels and resource allocation.",
-        "metric": "🏥 Efficient healthcare operations",
-        "tags": ["Forecasting", "ILP", "Healthcare Analytics"],
-        "link": "https://hospital-scheduling-qs9zxmieo7vnwhppip6hxu.streamlit.app/"
-        },
-
-        {
-        "title": "LLM-Powered Operations Research Solver",
-        "desc": "Built an AI-powered system that converts natural language business problems into mathematical optimization models and solves them automatically.",
-        "metric": "🤖 AI + Operations Research",
-        "tags": ["LLM", "Optimization", "Prompt Engineering"],
-        "link": "https://llm-or-solver-9xns3mj9owta7knv9vrqfn.streamlit.app/"
-        },
-    { "title": "Automated Reporting Pipeline",       "desc": "End-to-end Python automation: Excel → parameterised SQL + Jupyter. Real-time trend & anomaly detection on financial datasets.", "metric": "⚡ ~40% less manual reporting", "tags": ["Python","SQL","ETL"],          "link": "" },
-    { "title": "Demand Forecasting — Walmart / M5", "desc": "Product-store level forecasts modelling trends, seasonality & holidays with XGBoost on the M5 retail dataset.",              "metric": "📈 15–25% accuracy gain",       "tags": ["Time Series","XGBoost"],      "link": "" },
-    { "title": "Fraud Detection on Financial Data", "desc": "Classifiers on imbalanced transaction data; model choice aligned to business risk via ROC-AUC & Precision-Recall.",          "metric": "🎯 >30% recall improvement",    "tags": ["ML","Imbalanced Data"],       "link": "" },
-    { "title": "Hospital Shift Scheduling",          "desc": "MILP model for 16-staff scheduling ensuring full coverage & labour-rule compliance using Pyomo + CBC.",                        "metric": "10% cost reduction",            "tags": ["MILP","Pyomo"],               "link": "" },
-    { "title": "Kernel Method for CCA",              "desc": "M.Sc. thesis: kernel-based CCA extension capturing nonlinear correlations as an optimisation problem. Outperformed traditional CCA.", "metric": "🔬 Novel research",        "tags": ["Kernel Methods","Research"],  "link": "" }
-  ],
-  "achievements": [
-    { "icon": "🏆", "title": "AIR 60 – IIT JAM Mathematics 2022",  "desc": "All India Rank 60 → direct IIT Bombay admission." },
-    { "icon": "🥈", "title": "NPTEL Elite Silver – Data Science",   "desc": "Outstanding performance in NPTEL Data Science for Engineers." },
-    { "icon": "🎓", "title": "Jawahar Navodaya Vidyalaya",          "desc": "Cleared JNVST in 5th standard." },
-    { "icon": "📦", "title": "Dept. Fest Logistics – IIT Bombay",   "desc": "Managed procurement, printing & guest arrangements for IEOR fest." }
   ]
 }
