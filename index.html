@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Sachin Patel — Data Scientist. IIT Bombay M.Sc. Python automation, SQL pipelines, ML.">
-<meta property="og:title" content="Sachin Patel — Data Scientist">
+<meta name="description" content="Sachin Patel — Operations Research Scientist specializing in Mathematical Optimization, Supply Chain, Vehicle Routing, and Decision Intelligence.">
+<meta property="og:title" content="Sachin Patel — Operations Research Scientist">
 <meta property="og:type"  content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<title>Sachin Patel — Data Scientist</title>
+<title>Sachin Patel — Operations Research Scientist</title>
 </head>
 <body>
 
@@ -150,15 +150,29 @@
     <h2 class="sec-title">Get in Touch</h2>
     <div class="contact-grid">
       <div>
-        <p class="contact-blurb">Open to Data &amp; Automation internships in Mumbai or Gurugram. Let's talk.</p>
+        <p class="contact-blurb">Open to Operations Research, Optimization, and Decision Science opportunities across India.</p>
         <div class="contact-links" id="contact-links"></div>
       </div>
-      <form action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="887edbee-b8c4-42fe-b010-90e1caba039c">
-        <input type="text" name="name" required>
-        <input type="email" name="email" required>
-        <textarea name="message" required></textarea>
-        <button type="submit">Submit</button>
+     <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+     <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+     <input class="f-input" type="text" name="name" placeholder="Your name" required>
+     <input class="f-input" type="email" name="email" placeholder="your@email.com" required>
+     <input
+                type="hidden"
+                name="subject"
+                value="New Portfolio Contact">
+     
+     <textarea class="f-input f-ta"
+                name="message"
+                placeholder="Your message..."
+                required></textarea>
+      <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+      <button class="btn-primary w-full" type="submit">
+               Send Message
+      </button>
+      <input type="hidden"
+               name="redirect"
+               value=""https://sp0196118.github.io/thankyou.html">
       </form>
     </div>
   </div>
