@@ -153,13 +153,13 @@
         <p class="contact-blurb">Open to Data &amp; Automation internships in Mumbai or Gurugram. Let's talk.</p>
         <div class="contact-links" id="contact-links"></div>
       </div>
-      <form class="contact-form" id="contact-form">
-        <input class="f-input" type="text"  placeholder="Your name"      required>
-        <input class="f-input" type="email" placeholder="your@email.com" required>
-        <textarea class="f-input f-ta" placeholder="Your message…" required></textarea>
-        <button type="submit" class="btn-primary w-full">Send Message</button>
-        <p class="form-ok hidden" id="form-ok">✓ Sent! Sachin will reply soon.</p>
-      </form>
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="887edbee-b8c4-42fe-b010-90e1caba039c">
+        <input type="text" name="name" required>
+        <input type="email" name="email" required>
+        <textarea name="message" required></textarea>
+        <button type="submit">Submit</button>
+     </form>
     </div>
   </div>
 </section>
