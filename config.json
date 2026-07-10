@@ -175,33 +175,6 @@
 ],
   "projects": [
   {
-    "title": "LLM-Powered Operations Research Solver",
-    "desc": "AI-powered platform that converts natural-language business problems into MILP formulations by automatically extracting objectives, constraints, and decision variables, reducing optimization model development from hours to minutes.",
-    "metric": "🤖 Natural Language → Optimization Model",
-    "tags": [
-      "LLM",
-      "MILP",
-      "Pyomo",
-      "Optimization",
-      "Streamlit"
-    ],
-    "link": "https://llm-or-solver-9xns3mj9owta7knv9vrqfn.streamlit.app/"
-  },
-
-  {
-    "title": "Supply Chain Digital Twin",
-    "desc": "Interactive digital twin for logistics operations integrating optimization, simulation, demand forecasting, KPI monitoring, and scenario analysis for supply chain decision intelligence.",
-    "metric": "🚚 Decision Intelligence Platform",
-    "tags": [
-      "Optimization",
-      "Simulation",
-      "Supply Chain",
-      "Python"
-    ],
-    "link": "https://github.com/sp0196118/Emergent-Supply-Chain-Intelligence-Platform"
-  },
-
-  {
     "title": "EV Charging Grid Orchestration",
     "desc": "Optimized EV charging infrastructure using demand clustering and Set Cover optimization to maximize geographic coverage while minimizing installation costs.",
     "metric": "⚡ 90%+ Coverage",
@@ -213,20 +186,6 @@
     ],
     "link": "https://sp0196118.github.io/EV-Charging-Grid-Orchestration/"
   },
-
-  {
-    "title": "Dark Kitchen Delivery Zone Optimizer",
-    "desc": "Facility location optimization model that determines optimal cloud kitchen locations using demand clustering and mathematical programming to improve delivery efficiency.",
-    "metric": "🍔 Facility Location Optimization",
-    "tags": [
-      "Facility Location",
-      "Optimization",
-      "PuLP",
-      "Folium"
-    ],
-    "link": "https://dark-kitchen-wftmpywm3hjypwp67eqrrc.streamlit.app/"
-  },
-
   {
     "title": "Dynamic Pricing Engine",
     "desc": "Optimization-driven pricing system combining demand forecasting and price elasticity models to recommend profit-maximizing product prices.",
@@ -253,43 +212,6 @@
     "link": "https://hospital-scheduling-qs9zxmieo7vnwhppip6hxu.streamlit.app/"
   },
 
-  {
-    "title": "IPL Team Selection Optimizer",
-    "desc": "Integer Programming model that selects an optimal cricket squad under budget, role, and team composition constraints using player performance analytics.",
-    "metric": "🏏 Sports Optimization",
-    "tags": [
-      "Integer Programming",
-      "Optimization",
-      "Sports Analytics"
-    ],
-    "link": "https://cricket-optimizer-fp5uqn2hlnxdbaramehpnn.streamlit.app/"
-  },
-
-  {
-    "title": "Vehicle Routing Optimization Engine",
-    "desc": "Production-inspired Vehicle Routing Problem solver implementing routing optimization with Pyomo and commercial/open-source solvers for logistics planning.",
-    "metric": "🚛 VRP Optimization",
-    "tags": [
-      "VRP",
-      "Pyomo",
-      "Gurobi",
-      "OR-Tools"
-    ],
-    "link": ""
-  },
-
-  {
-    "title": "Kernel Canonical Correlation Analysis",
-    "desc": "M.Sc. research extending Canonical Correlation Analysis using kernel methods to capture nonlinear relationships between datasets through optimization-based learning.",
-    "metric": "🎓 Research Thesis",
-    "tags": [
-      "Kernel Methods",
-      "Optimization",
-      "Research",
-      "Machine Learning"
-    ],
-    "link": ""
-  }
 ],
    "achievements": [
     {
