@@ -311,7 +311,7 @@ function rContact() {
     <a href="tel:${esc(C.phone)}"   class="c-link"><div class="c-icon">${IC.phone}</div>${esc(C.phone)}</a>
     <a href="${esc(C.linkedin)}" target="_blank" rel="noopener" class="c-link"><div class="c-icon">${IC.linkedin}</div>${esc("Linkedin")}</a>
     ${C.github?`<a href="${esc(C.github)}" target="_blank" rel="noopener" class="c-link"><div class="c-icon">${IC.github}</div>${esc("Github")}</a>`:''}
-    <span class="c-link"><div class="c-icon">${IC.pin}</div></span>`;
+    <span class="c-link"><div class="c-icon">${IC.pin}</div>${esc(C.location)}</span>`;
 }
 
 function rFooter() {
