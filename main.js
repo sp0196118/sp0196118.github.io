@@ -291,11 +291,11 @@ function rAch() {
 
 function rContact() {
   document.getElementById('contact-links').innerHTML = `
-    <a href="mailto:${esc(C.email)}" class="c-link"><div class="c-icon">${IC.email}</div>${esc(C.email)}</a>
-    <a href="tel:${esc(C.phone)}"   class="c-link"><div class="c-icon">${IC.phone}</div>${esc(C.phone)}</a>
-    <a href="${esc(C.linkedin)}" target="_blank" rel="noopener" class="c-link"><div class="c-icon">${IC.linkedin}</div>${esc(C.linkedin.replace('https://',''))}</a>
-    ${C.github?`<a href="${esc(C.github)}" target="_blank" rel="noopener" class="c-link"><div class="c-icon">${IC.github}</div>${esc(C.github.replace('https://',''))}</a>`:''}
-    <span class="c-link"><div class="c-icon">${IC.pin}</div>${esc(C.location)}</span>`;
+    <a href="mailto:${esc(C.email)}" class="c-link"><div class="c-icon">${IC.email}</div></a>
+    <a href="tel:${esc(C.phone)}"   class="c-link"><div class="c-icon">${IC.phone}</div></a>
+    <a href="${esc(C.linkedin)}" target="_blank" rel="noopener" class="c-link"><div class="c-icon">${IC.linkedin}</div></a>
+    ${C.github?`<a href="${esc(C.github)}" target="_blank" rel="noopener" class="c-link"><div class="c-icon">${IC.github}</div></a>`:''}
+    <span class="c-link"><div class="c-icon">${IC.pin}</div></span>`;
 }
 
 function rFooter() {
