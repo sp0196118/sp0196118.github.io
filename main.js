@@ -150,14 +150,30 @@ function initHeroScroll() {
 // FIX: guard against missing #contact-form / #form-ok so this can never
 // throw and block the rest of the boot sequence (this was the bug that
 // froze the loading screen on the live site).
-function initContactForm() {
+async function initContactForm() {
   const form = document.getElementById('contact-form');
-  const ok   = document.getElementById('form-ok');
-  if (!form) { console.warn('[initContactForm] #contact-form not found — skipping'); return; }
-  form.addEventListener('submit', e => {
+  const ok = document.getElementById('form-ok');
+
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    form.style.display = 'none';
-    if (ok) ok.classList.remove('hidden');
+
+    const formData = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      form.style.display = 'none';
+      ok.classList.remove('hidden');
+    } else {
+      alert(result.message || 'Failed to send message.');
+    }
   });
 }
 
