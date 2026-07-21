@@ -97,6 +97,14 @@ input,textarea{font-family:var(--f);}
   max-width:1140px;margin:0 auto;
   position:relative;z-index:1;
 }
+.hero-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    margin-top: 50px;   /* Add this */
+}
 .hero-inner{display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center;width:100%;}
 .hero-eyebrow{
   font-family:var(--m);font-size:.7rem;color:var(--a);letter-spacing:.2em;text-transform:uppercase;
